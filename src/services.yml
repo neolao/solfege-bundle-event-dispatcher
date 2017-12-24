@@ -1,0 +1,3 @@
+services:
+    solfege_event_dispatcher:
+        class: "Dispatcher"

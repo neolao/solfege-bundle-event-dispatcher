@@ -1,0 +1,51 @@
+{
+    "name": "solfegejs-event-dispatcher",
+    "description": "Event dispatcher bundle",
+    "version": "1.0.0",
+    "author": "neolao <contact@neolao.com>",
+    "private": false,
+    "repository": "https://github.com/neolao/solfege-bundle-event-dispatcher.git",
+    "license": "MIT",
+    "main": "lib/Bundle.js",
+    "engines": {
+        "node": ">= 9"
+    },
+    "files": [
+        "lib",
+        "src"
+    ],
+    "dependencies": {
+        "decko": "^1.2.0"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.7",
+        "babel-preset-solfege": "^1.1.2",
+        "eslint": "^3.19",
+        "eslint-plugin-solfege": "^1.0",
+        "flow-bin": "^0.60.1",
+        "solfegejs-application": "^3.1.1",
+        "solfegejs-dependency-injection": "^2.2.4",
+        "watch": "^1.0.2"
+    },
+    "scripts": {
+        "flow-stop": "flow stop",
+        "flow-start": "flow start",
+        "flow-restart": "flow stop && flow start",
+        "lint": "eslint --ext .js src",
+        "prepare": "npm run build",
+        "prebuild": "npm run flow-restart && flow",
+        "build": "babel --out-dir lib src --copy-files",
+        "watch": "watch 'echo \"----------\"; npm run build --silent' ./src"
+    },
+    "babel": {
+        "presets": [
+            "solfege"
+        ]
+    },
+    "eslintConfig": {
+        "extends": [
+            "eslint:recommended",
+            "plugin:solfege/recommended"
+        ]
+    }
+}
