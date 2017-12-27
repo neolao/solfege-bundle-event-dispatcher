@@ -1,7 +1,7 @@
 {
     "name": "solfegejs-event-dispatcher",
     "description": "Event dispatcher bundle",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": "neolao <contact@neolao.com>",
     "private": false,
     "repository": "https://github.com/neolao/solfege-bundle-event-dispatcher.git",

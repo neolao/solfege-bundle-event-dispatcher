@@ -34,7 +34,8 @@ export default class EventListenerrCompilerPass
                 }
                 definition.addMethodCall("addListener", [
                     tag.event,
-                    reference
+                    reference,
+                    tag.method
                 ]);
             }
         }
